@@ -1,0 +1,103 @@
+#tt {
+    overflow: hidden;
+    clear: both;
+    width: 970px;
+    margin: 10px auto;
+    text-align: center;
+    padding-top: 0px;
+    background-color: #FFF;
+    position: absolute;
+    top: 0px;
+}
+
+#tt div.rg {
+    height: 38px;
+    background: url('/pict/tb_r.png') no-repeat top right;
+    float: right;
+    width: 6px;
+    overflow: hidden;
+    margin-right: 0px
+}
+
+#tt div.le {
+    height: 38px;
+    background: url('/pict/tb_l.png') no-repeat top right;
+    float: left;
+    width: 6px;
+    overflow: hidden;
+    margin-left: 0px
+}
+
+#tt div.bx {
+    height: 38px;
+    overflow: hidden;
+    background: url('/pict/tb_back1.png') no-repeat;
+    float: left;
+    width: 958px;
+}
+
+#tt ul {
+    height: 38px;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    width: 958px;
+    border: 0px solid red
+}
+
+#tt li {
+    float: left;
+    height: 38px;
+    list-style-type: none;
+    _width: 10px;
+    white-space: nowrap;
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+    background: url('/pict/tb_bdiv1.png') no-repeat top right;
+}
+
+#tt li a {
+    display: block;
+    color: #111;
+    height: 38px;
+    padding: 0 13px;
+    text-decoration: none;
+    margin-right: 3px
+}
+
+#tt li a span {
+    display: block;
+    padding-top: 9px
+}
+
+#tt li a:hover {
+    background: url('/pict/tb_back2a.png') repeat-x top left;
+    text-decoration: none;
+    color: #000;
+}
+
+#tt li.sel {
+    font-weight: bold
+}
+
+#tt li.sel a {
+    background: url('/pict/tb_back3.png') repeat-x;
+    color: #fff
+}
+
+#tt li.sel a:hover {
+    filter: alpha(opacity=100);
+    opacity: 1;
+    color: #fff
+}
+
+#tt li.rg {
+    float: right;
+    height: 38px;
+    background: url('/pict/tb_bdiv1.png') no-repeat top left;
+}
+
+#tt li.rg a {
+    margin-left: 3px
+}

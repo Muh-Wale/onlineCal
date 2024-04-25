@@ -1,0 +1,459 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+    <title>Online scientific calculator with tape - CALCULATORIA.com</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1250" />
+    <meta http-equiv="Content-language" content="en" />
+    <meta name="google-site-verification" content="Z4LEMJA10S47QCLBYaPv4sWPREmd6C1NOax70-GF7Sk" />
+    <meta name="keywords" content="calculator, online calculator, advanced calculator" />
+    <meta property="og:site_name" content="Online calculator" />
+    <meta property="og:title" content="Online scientific calculator" />
+    <meta property="og:url" content="http://www.calculatoria.com" />
+    <meta property="og:description" content="Calculator with basic and advanced mathematical functions" />
+    <meta property="og:type" content="website" />
+    <meta name="robots" content="all,index,follow" />
+    <meta name="googlebot" content="index,follow,snippet,archive" />
+    <meta name="description" content="Calculator online. Simple and scientific. With calculation memory" />
+    <meta name="author" content="Zasobování a.s." />
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="-1" />
+    <meta property="og:image" content="http://www.kalkula.cz/pict/kalk_300.gif" />
+    <link rel="shortcut icon" href="favicon.ico" />
+
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="/jq/jquery.min.js"></script>
+    <link rel="stylesheet" href="/bs/css/bootstrap.min.css">
+    <script src="/bs/js/bootstrap.min.js"></script>
+
+
+    <link rel="stylesheet" type="text/css" href="/calc.css?v=1427379442" />
+    <link rel="stylesheet" type="text/css" href="/tt.css?v=1427379444" />
+
+    <link rel="stylesheet" type="text/css" href="/cbtnm.css?v=1427379444" />
+
+    <link rel="stylesheet" type="text/css" href="/calc-theme.css?v=1427379443" />
+
+    <script type="text/javascript" language="JavaScript" src="/bcksp.js?v=3">
+    </script>
+    <script type="text/javascript" language="JavaScript" src="/en_lng.js?v=6">
+    </script>
+    <script type="text/javascript" language="JavaScript" src="/c.js?v=8"></script>
+
+</head>
+
+<body id="cbody" onload="startCalc();" onkeyup="detectEvent(event);" onunload="stopcalc()" onclick="onclickBody()">
+    <div class="eu-cookies eu-cookies-panel"></div>
+    <form id="fcalc" name="calculator" action="*" onsubmit="return false;">
+        <input value="0" type="hidden" name="expr" />
+
+
+        <div class="container">
+
+
+
+            <div class="row">
+                <div class="hidden-xs col-md-8 col-lg-7">
+                    <div class="texttop">
+                        <h1 class="cmod">Calculatoria.com is online calculator <br>with <a href='/simple-online-calculator/'>basic</a> and <a href='/scientific-online-calculator/'>advanced</a> mathematical functions.</h1>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-7 col-md-7 col-lg-4">
+                    <div class="boxclay" onclick="paskaFocus=0;">
+                        <input value="0" type="text" size="10" onchange="this.value='';" id="foc" name="foc" class="hidfoc" />
+
+                        <div id="kuldiv">
+
+                            <div class="tcalc">
+                                <table border="0" id="ocalc" class="tckey" cellspacing="0" cellpadding="0">
+                                    <tr>
+                                        <td>
+                                            <div class="topnaz">CALCULATORIA.com</div>
+                                            <span id="owerinfo">&nbsp;</span><span id="kurzinfo">&nbsp;</span>&nbsp;&nbsp;<span id="meminfo">&nbsp;</span>
+                                            <div id="prb" title="size 3" class="prepbig prepsz hnd" onclick="zmenVelikost('0')">&nbsp;</div>
+                                            <div id="prs" title="size 2" class="prepmal prepsz hnd sellay" onclick="zmenVelikost('1')">&nbsp;</div>
+                                            <div id="prm" title="size 1" class="prepmin prepsz hnd" onclick="zmenVelikost('2')">&nbsp;</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="divdisplay">
+                                                <input value="0" class="displaysum" type="text" name="exprdisplay" onclick="blur(this);document.calculator.foc.focus();" readonly="readonly" />
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="preppas"><a href="javaScript:void(0);" id="prepp" onclick="paskaHide();blur(this)">display tape</a></div>
+                                            <a href="./cal2.html">advance</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td id="advcalcbox" class="advbut hid">
+
+                                            <div class="btnx" onclick="btnDown(this);">
+                                                <a href="#c" class="abtn0 zabtn" title="Store exchange rate ( 1$ = x &euro; )" onclick="set_rate();blur(this)">rate</a>
+                                            </div>
+                                            <div class="btnx" onclick="btnDown(this);">
+                                                <a href="#c" class="abtn0 zabtn" title="Convert on &euro; [Keyboard: E]" onclick="to_rate();blur(this)">&euro;</a>
+                                            </div>
+                                            <div class="btnx" onclick="btnDown(this);">
+                                                <a href="#c" class="abtn0 zabtn" title="Convert on $ [Keyboard: K]" onclick="from_rate();blur(this)">$</a>
+                                            </div>
+                                            <div class="btnx" onclick="btnDown(this);">
+                                                <a href="#c" class="abtn0 zabtn" title="Square root of x" onclick="power('0.5');blur(this)">&radic;</a>
+                                            </div>
+                                            <div class="btnx" onclick="btnDown(this);">
+                                                <a href="#c" class="abtn0 zabtn" title="x raised to the power of y" onclick="power_m();blur(this)">x<sup>y</sup></a>
+                                            </div>
+                                            <div class="btnx" onclick="btnDown(this);">
+                                                <a href="#c" class="abtn0 zabtn" title="x squared" onclick="power('2');blur(this)">x&sup2;</a>
+                                            </div>
+                                            <div class="btnx" onclick="btnDown(this);">
+                                                <a href="#c" class="abtn0 zabtn" title="arcsine of x" onclick="asin();blur(this)">asin</a>
+                                            </div>
+
+                                            <div class="btnx" onclick="btnDown(this);">
+                                                <a href="#c" class="abtn0 zabtn" title="arcosine of x" onclick="acos();blur(this)">acos</a>
+                                            </div>
+
+                                            <div class="btnx" onclick="btnDown(this);">
+                                                <a href="#c" class="abtn0 zabtn" title="arctan of x" onclick="atan();blur(this)">atan</a>
+                                            </div>
+
+
+
+                                            <div class="btnx" onclick="btnDown(this);">
+                                                <a href="#c" class="abtn0 zabtn" title="10 raised to the power of x" onclick="power_x(10);blur(this)">10<sup>x</sup></a>
+                                            </div>
+
+
+                                            <div class="btnx" onclick="btnDown(this);">
+                                                <a href="#c" class="abtn0 zabtn" title="Natural logarithm of x" onclick="ln();blur(this)">ln</a>
+                                            </div>
+                                            <div class="btnx" onclick="btnDown(this);">
+                                                <a href="#c" class="abtn0 zabtn" title="Base-10 logarithm of x" onclick="log();blur(this)">log</a>
+                                            </div>
+
+                                            <div class="btnx" onclick="btnDown(this);">
+                                                <a href="#c" class="abtn0 zabtn" title="Sine of x" onclick="sin();blur(this)">sin</a>
+                                            </div>
+                                            <div class="btnx" onclick="btnDown(this);">
+                                                <a href="#c" class="abtn0 zabtn" title="Cosine of x" onclick="cos();blur(this)">cos</a>
+                                            </div>
+                                            <div class="btnx" onclick="btnDown(this);">
+                                                <a href="#c" class="abtn0 zabtn" title="Tangent of x" onclick="tan();blur(this)">tan</a>
+                                            </div>
+                                            <div class="btnx" onclick="btnDown(this);">
+                                                <a href="#c" class="abtn0 zabtn" title="Multiplicative inverse" onclick="inv();blur(this)">1/x</a>
+                                            </div>
+                                            <div class="btnx" onclick="btnDown(this);">
+                                                <a href="#c" class="abtn0 zabtn" title="Ludolphine number" onclick="picko();blur(this)">&pi;</a>
+                                            </div>
+                                            <div class="btnx" onclick="btnDown(this);">
+                                                <a href="#c" class="abtn0 zabtn" title="x factorial" onclick="fac();blur(this)">x!</a>
+                                            </div>
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="zbut">
+
+                                            <div class="btnplain">
+                                                <div class="zaos">round<br/>
+                                                    <select name="desmis" size="1" class="selzao" title="rounding decimal numbers" onfocus="seldesmis=1;" onblur="seldesmis=0;" onchange="onChangeRound();blur(this);document.calculator.foc.focus();">
+													<option value="0">0</option>
+													<option value="1">1</option>
+													<option value="2">2</option>
+													<option value="3" selected="selected">3</option>
+													<option value="4">4</option>
+													<option value="5">5</option>
+													<option value="6">6</option>
+													<option value="7">7</option>
+													<option value="8">8</option>
+													<option value="9">9</option>
+													<option value="10">10</option>
+													<option value="11">11</option>
+													<option value="12">12</option>
+													<option value="13">13</option>
+													<option value="14">14</option>
+												</select>
+                                                </div>
+                                            </div>
+
+                                            <div class="btnmar btn2" onclick="btnDown(this);">
+                                                <a href="#c" class="abtn2 zabtn" onclick="enter('(');blur(this)">(</a>
+                                            </div>
+
+                                            <div class="btnmar btn2" onclick="btnDown(this);">
+                                                <a href="#c" class="abtn2 zabtn" onclick="enter(')');blur(this)">)</a>
+                                            </div>
+                                            <div class="btnmar btn2" id="btn8" onclick="btnDown(this);">
+                                                <a href="#c" class="abtn2 zabtn bo" title="Backspace" onclick="zrusPosledniZnak();blur(this)"><span class="bdel">DEL</span></a>
+                                            </div>
+                                            <div class="btnmar btn6" id="btn27" onclick="btnDown(this);">
+                                                <a href="#c" class="abtn6 zabtn" title="delete display" onclick="clearDisplay();blur(this)">C</a>
+                                            </div>
+                                            <div class="btnmar btn2" id="btn80" onclick="btnDown(this);">
+                                                <a href="#c" class="abtn2 zabtn" title="add x to memory" onclick="plus_mem();blur(this)">M+</a>
+                                            </div>
+
+                                            <div class="btnmar btn2" id="btn73" onclick="btnDown(this);">
+                                                <a href="#c" class="abtn2 zabtn" title="subtract x from memory" onclick="minus_mem();blur(this)">M-</a>
+                                            </div>
+                                            <div class="btnmar btn2" id="btn82" onclick="btnDown(this);">
+                                                <a href="#c" class="abtn2 zabtn" title="recall memory" onclick="pop_mem();blur(this)">MR</a>
+                                            </div>
+
+                                            <div class="btnmar btn2" id="btn83" onclick="btnDown(this);">
+                                                <a href="#c" class="abtn2 zabtn" title="store x in memory (previous memory content is deleted)" onclick="push_mem();blur(this)">MS</a>
+                                            </div>
+
+                                            <div class="btnmar btn2" id="btn67" onclick="btnDown(this);">
+                                                <a href="#c" class="abtn2 zabtn" title="clear memory" onclick="clear_mem();blur(this)">MC</a>
+                                            </div>
+                                            <div class="btnmar btn2" id="btn103" onclick="btnDown(this);">
+                                                <a href="#c" class="abtn2 zabtn" onclick="enter(7);blur(this)">7</a>
+                                            </div>
+                                            <div class="btnmar btn2" id="btn104" onclick="btnDown(this);">
+                                                <a href="#c" class="abtn2 zabtn" onclick="enter(8);blur(this)">8</a>
+                                            </div>
+                                            <div class="btnmar btn2" id="btn105" onclick="btnDown(this);">
+                                                <a href="#c" class="abtn2 zabtn" onclick="enter(9);blur(this)">9</a>
+                                            </div>
+                                            <div class="btnmar btn1" id="btn111" onclick="btnDown(this);">
+                                                <a href="#c" class="abtn1 zabtn" onclick="enter('/');blur(this)">&divide;</a>
+                                            </div>
+                                            <div class="btnmar btn2" onclick="btnDown(this);">
+                                                <a href="#c" class="abtn2 zabtn" onclick="prcnt();lastKey=13;blur(this);">%</a>
+                                            </div>
+                                            <div class="btnmar btn2" id="btn100" onclick="btnDown(this);">
+                                                <a href="#c" class="abtn2 zabtn" onclick="enter(4);blur(this)">4</a>
+                                            </div>
+                                            <div class="btnmar btn2" id="btn101" onclick="btnDown(this);">
+                                                <a href="#c" class="abtn2 zabtn" onclick="enter(5);blur(this)">5</a>
+                                            </div>
+                                            <div class="btnmar btn2" id="btn102" onclick="btnDown(this);">
+                                                <a href="#c" class="abtn2 zabtn" onclick="enter(6);blur(this)">6</a>
+                                            </div>
+                                            <div class="btnmar btn1" id="btn106" onclick="btnDown(this);">
+                                                <a href="#c" class="abtn1 zabtn" onclick="enter('*');blur(this)">&times;</a>
+                                            </div>
+                                            <div class="btnmar btn2" onclick="btnDown(this);">
+                                                <a href="#c" class="abtn2 zabtn" onclick="enter('e');blur(this)">exp</a>
+                                            </div>
+                                            <div class="btnmar btn2" id="btn97" onclick="btnDown(this);">
+                                                <a href="#c" class="abtn2 zabtn" onclick="enter(1);blur(this)">1</a>
+                                            </div>
+                                            <div class="btnmar btn2" id="btn98" onclick="btnDown(this);">
+                                                <a href="#c" class="abtn2 zabtn" onclick="enter(2);blur(this)">2</a>
+                                            </div>
+                                            <div class="btnmar btn2" id="btn99" onclick="btnDown(this);">
+                                                <a href="#c" class="abtn2 zabtn" onclick="enter(3);blur(this)">3</a>
+                                            </div>
+                                            <div class="btnmar btn1" id="btn109" onclick="btnDown(this);">
+                                                <a href="#c" class="abtn1 zabtn" onclick="enter('-');blur(this)">-</a>
+                                            </div>
+                                            <div class="btnmar btn2" onclick="btnDown(this);">
+                                                <a href="#c" class="abtn2 zabtn" onclick="neg();blur(this)">&plusmn;</a>
+                                            </div>
+                                            <div class="btnmar btn2" id="btn96" onclick="btnDown(this);">
+                                                <a href="#c" class="abtn2 zabtn" onclick="enter(0);blur(this)">0</a>
+                                            </div>
+                                            <div class="btnmar btn2" id="btn110" onclick="btnDown(this);">
+                                                <a href="#c" class="abtn2 zabtn" onclick="enter('.');blur(this)">&middot;</a>
+                                            </div>
+                                            <div class="btnmar btn2" id="btn13" onclick="btnDown(this);">
+                                                <a href="#c" class="abtn2 zabtn" onclick="calc();newCalc=1;blur(this)">=</a>
+                                            </div>
+                                            <div class="btnmar btn3p" id="btn107" onclick="btnDown(this);">
+                                                <a href="#c" class="abtn3p zabtn" onclick="enter('+');blur(this)">+</a>
+                                            </div>
+
+                                        </td>
+                                    </tr>
+                                </table>
+
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+                <div class="col-sm-5 col-md-4 col-lg-4">
+                    <div id="paskabox">
+                        <div class="paskaBox ">
+                            <div class="paskaRam">
+                                <div class="brdpaska_chrome"><input class="d_display" type="text" name="datewatch" /></div>
+
+                                <textarea class="paskatxt" id="paska" rows="" cols="" onclick="paskaOnClick()"> </textarea>
+                            </div>
+                            <div class="paskapata"></div>
+                        </div>
+
+                        <div style="width: 250px; margin: 0 auto">
+                            <div class="prn fll" id="btnedit"><img src="/pict/b1_en.gif" alt="edit tape" class="btnpas" title="edit tape" onclick="editujPasku();blur(this)" /></div>
+                            <div class="prn male5 fll" id="btnsv"><img src="/pict/b1s_en.gif" alt="edit tape" class="btnpas" title="edit tape" onclick="ulozPasku();blur(this)" /></div>
+                            <div class="prn male5 fll"><img src="/pict/b3_en.gif" alt="download as *.txt file" class="btnpas" title="download as *.txt file" onclick="downTxtPaskuChr();blur(this)" /></div>
+                            <div class="prn male5 fll"><img src="/pict/b2_en.gif" alt="erase contents of tape" class="btnpas" title="erase contents of tape" onclick="smazPasku();blur(this)" /></div>
+                            <div class="prn male5 fll"><img src="/pict/b4_en.gif" alt="print tape" class="btnpas" title="print tape" onclick="tiskniPasku();blur(this)" /></div>
+
+                        </div>
+                    </div>
+                    <div class="paskaboxbtn" id="paskaboxbtn"></div>
+
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-7 col-lg-4">
+                    <div style="width: 300px; margin: 10px auto">
+
+                        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                        <!-- calculatoria_pravy_sloupec -->
+                        <ins class="adsbygoogle" style="display:inline-block;width:300px;height:600px" data-ad-client="ca-pub-8958172813651449" data-ad-slot="8635748528"></ins>
+                        <script>
+                            (adsbygoogle = window.adsbygoogle || []).push({});
+                        </script>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <script language="javascript" type="text/javascript">
+
+
+function downTxtPaskuChr(){
+    
+}
+                /* <![CDATA[ */
+                a = showDisplay();
+                mem = "";
+
+                advCalc = 0; //advHide();
+
+                if (advCalc == 1) {
+                    document.getElementById('advcalcbox').style.display = 'block';
+                    document.getElementById('prepc').innerHTML = preloz("jednoduchá kalkulačka");
+                    //document.getElementById('paskabox').style.backgroundImage="url('/pict/note_bkg.gif')";
+                } else {
+                    document.getElementById('advcalcbox').style.display = 'none';
+                    document.getElementById('prepc').innerHTML = preloz("vědecká kalkulačka");
+                }
+                if (advPaska == 1) {
+                    document.getElementById('paskabox').style.display = 'block';
+                    //document.getElementById('paskaboxbtn').style.display='block';
+                    document.getElementById('prepp').innerHTML = preloz("skrýt pásku");
+                }
+                var seldes = document.calculator.desmis.length;
+                for (i = 0; i < seldes; i++) {
+                    if (document.calculator.desmis.options[i].value == zdsm) {
+                        document.calculator.desmis.selectedIndex = i;
+                    }
+                }
+                document.getElementById('thlp').style.display = 'block';
+                document.getElementById('thlpkz').style.display = 'block';
+                document.getElementById('thlpkzm').style.display = 'block';
+
+                document.getElementById('paska').style.height = (document.getElementById('ocalc').offsetHeight - 95) + "px";
+                document.calculator.foc.focus();
+                /* ]]> */
+            </script>
+
+            <!-- numerino measurement v3 -->
+            <script type="text/javascript">
+                var _sid = 36;
+                var _section = '';
+            </script>
+            <script type="text/javascript" src="https://www.numerino.cz/js/measure.js"></script>
+            <!-- numerino - end -->
+
+
+
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="fll mato20">
+                        <a href="#" title="Add calculator to favourites" rel="sidebar" onclick="return AddFavorite(this,document.location.href,document.title);">
+	<img src="/pict/hvezda.gif" class="" border="0" alt=""/>Add calculator to favourites</a>
+                    </div>
+
+
+                    <div class="flr mato20">
+                        <a href="http://www.kalkula.cz" title="czech online calculator - www.kalkula.cz"><img src="/pict/vl_cz.gif" alt="www.kalkula.cz" border="0"/></a>
+                        <a href="http://www.kalkulacka.sk" title="slovak online calculator - www.kalkulacka.sk"><img src="/pict/vl_sk.gif" alt="www.kalkulacka.sk" border="0"/></a>
+                        <a href="http://www.calculatoria.com" title="english online calculator - www.calculatoria.com"><img src="/pict/vl_en.gif" alt="www.calculatoria.com" border="0"/></a>
+                    </div>
+
+
+                    <div class="clbo"></div>
+                    <div class="textcopy">
+                        Copyright © 2024 Zásobování a.s. - All rights reserved.
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+
+    </form>
+
+    <style type="text/css">
+        .eu-cookies-panel {
+            color: #777;
+            background-color: #ddd;
+            padding: 5px 10px;
+            text-align: center;
+            font-size: 12px;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000
+        }
+
+        .eu-cookies button {
+            background: #14c920;
+            color: #fff;
+            border: 1px solid #0fb21b;
+            -moz-border-radius: 2px;
+            -webkit-border-radius: 2px;
+            border-radius: 2px;
+            padding: 3px 8px;
+            cursor: pointer;
+            cursor: hand
+        }
+
+        .eu-cookies-big button {
+            font-size: 20px;
+            padding: 10px 20px
+        }
+
+        .eu-cookies a {
+            color: #999;
+            margin: 0 5px
+        }
+    </style>
+    <script>
+        $('.eu-cookies-panel').html('Tento web používá k poskytování služeb, personalizaci reklam a analýze návštěvnosti soubory cookie. Používáním tohoto webu s tím souhlasíte. <a href=\"/cookie-info.php\">Více informací</a> <button>Beru na vědomí</button>');
+        $('.eu-cookies-big').html('<button>Beru na vědomí</button>');
+        $('.eu-cookies button').click(function() {
+            var date = new Date();
+            date.setFullYear(date.getFullYear() + 10);
+            document.cookie = 'eu-cookies=1; path=/; expires=' + date.toGMTString();
+            $('.eu-cookies').hide();
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,710 @@
+body,
+td,
+div {
+    font-family: Arial, Tahoma, Verdana, sans-serif;
+    font-size: 14px;
+}
+
+p,
+form,
+label,
+h1,
+h2,
+table,
+td,
+tr,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3 {
+    font-family: Arial, Tahoma, Verdana, sans-serif;
+}
+
+input {
+    font-family: Arial, Tahoma, Verdana, sans-serif;
+    font-size: 12px;
+}
+
+select {
+    font-family: Arial, Tahoma, Verdana, sans-serif;
+    font-size: 12px;
+}
+
+textarea {
+    font-family: Arial, Tahoma, Verdana, sans-serif;
+    font-size: 12px;
+    resize: none;
+}
+
+.checkbox {
+    margin: 0;
+    padding: 0;
+}
+
+a:link,
+a:visited,
+a:active {
+    color: #00519F;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #CC0000;
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 18px
+}
+
+h2 {
+    font-size: 22px
+}
+
+h3 {
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.hnd {
+    cursor: pointer;
+    cursor: hand;
+}
+
+.bo {
+    font-weight: bold;
+}
+
+.flr {
+    float: right;
+}
+
+.fll {
+    float: left;
+}
+
+.txtal {
+    text-align: left;
+}
+
+.txtar {
+    text-align: right;
+}
+
+.txtac {
+    text-align: center;
+}
+
+.male5 {
+    margin-left: 5px;
+}
+
+.male10 {
+    margin-left: 10px;
+}
+
+.male15 {
+    margin-left: 15px;
+}
+
+.male20 {
+    margin-left: 20px;
+}
+
+.mari5 {
+    margin-right: 5px;
+}
+
+.mari10 {
+    margin-right: 10px;
+}
+
+.mabo20 {
+    margin-bottom: 20px;
+}
+
+.mabo5 {
+    margin-bottom: 5px;
+}
+
+.cred {
+    color: red;
+}
+
+.cmod {
+    color: navy;
+}
+
+.clbo {
+    clear: both;
+}
+
+div#nifty {
+    background: #F0F8FF
+}
+
+b.rtop,
+b.rbottom {
+    display: block;
+    background: #FFF;
+    font-size: 0px
+}
+
+b.rtop b,
+b.rbottom b {
+    display: block;
+    height: 1px;
+    overflow: hidden;
+    background: #F0F8FF;
+}
+
+b.r1 {
+    margin: 0 5px
+}
+
+b.r2 {
+    margin: 0 3px
+}
+
+b.r3 {
+    margin: 0 2px
+}
+
+b.rtop b.r4,
+b.rbottom b.r4 {
+    margin: 0 1px;
+    height: 2px
+}
+
+div.nifty_box {
+    background: #eaeaea;
+    margin: 0px 0 0px 0;
+}
+
+div.nifty_box span.rtop,
+div.nifty_box span.rbottom {
+    display: block;
+    font-size: 0px;
+    background: #FFF
+}
+
+div.nifty_box span.rtop span,
+div.nifty_box span.rbottom span {
+    display: block;
+    height: 1px;
+    overflow: hidden;
+    background: #eaeaea
+}
+
+.hid {
+    display: none;
+}
+
+.topnaz {
+    float: left;
+    text-align: left;
+    margin-left: 4px;
+    color: #5F5F5F;
+}
+
+#meminfo {
+    text-align: left;
+    position: relative;
+    font-size: 10px;
+    top: 25px;
+    left: 20px;
+}
+
+#kurzinfo {
+    text-align: left;
+    position: relative;
+    font-size: 10px;
+    top: 25px;
+    left: 20px;
+}
+
+#owerinfo {
+    text-align: left;
+    position: relative;
+    font-size: 15px;
+    top: 47px;
+    left: 20px;
+    font-weight: bold;
+    width: 10px;
+}
+
+.hidfoc {
+    float: left;
+    background: #b4a77a;
+    font-size: 1px;
+    width: 1px;
+    height: 1px;
+    border: 0px;
+    color: #b4a77a;
+    position: relative;
+    top: 1200px;
+    left: 20px;
+    z-index: -10000;
+    visibility: hidden
+}
+
+.prepbig {
+    border: 1px solid #8F8F8F;
+    width: 10px;
+    height: 10px;
+    float: right;
+    margin: 0 2px 0 2px;
+}
+
+.prepmal {
+    border: 1px solid #8F8F8F;
+    width: 7px;
+    height: 7px;
+    float: right;
+    margin: 3px 2px 0 2px
+}
+
+.prepmin {
+    border: 1px solid #8F8F8F;
+    width: 5px;
+    height: 5px;
+    float: right;
+    margin: 5px 2px 0 2px;
+}
+
+TABLE.thlp {
+    margin: 5px 0px 15px 0px;
+}
+
+.thlp THEAD tr {
+    background-color: #6DAF82;
+    color: #fff;
+}
+
+.thlp THEAD td {
+    padding: 5px 10px 5px 10px;
+}
+
+.thlp TBODY td {
+    padding: 10px
+}
+
+.thlp TBODY td.brd1 {
+    vertical-align: top;
+    border-top: 1px solid silver;
+}
+
+.thlp TBODY td.brd2 {
+    vertical-align: top;
+    border-top: 1px solid silver;
+    border-left: 1px solid silver;
+}
+
+.brdpaska {
+    border: 0px;
+    padding: 29px 0 7px 0
+}
+
+.brdpaska_chrome {
+    border: 0px;
+    padding: 29px 0 3px 0;
+}
+
+.d_display {
+    border: 0px;
+    background-color: #FFFCDF;
+    width: 150px;
+    color: #91C8FF;
+    padding: 0px;
+    font-size: 12px;
+}
+
+.paskaBox {
+    margin: 10px 0px 0px 0px;
+    text-align: right;
+    border: 0px solid red;
+    background: url('/pict/note_bkg.gif?2') top no-repeat #fff;
+}
+
+.paskaHdr {
+    margin: 0px 0px 0px 0px;
+    height: 20px;
+    border: 0px solid red;
+}
+
+.paskaRam {
+    width: 293px;
+    margin: 0px auto;
+    border: 0px solid red;
+    padding: 0px 5px 0px 5px;
+    text-align: left;
+}
+
+.paska {
+    text-align: left;
+    overflow: auto;
+    font-size: 13px;
+    width: 250px;
+    line-height: 16px;
+}
+
+.paskatxt {
+    text-align: left;
+    overflow: auto;
+    font-size: 13px;
+    width: 271px;
+    height: 420px;
+    line-height: 16px;
+    border: 0px;
+    background-color: #fffce2;
+    background: url('/pict/note_bkg_txt.gif?4') top no-repeat #fff;
+}
+
+.paskaBox .prn {
+    float: left;
+    border: 0px solid red;
+    height: 25px;
+}
+
+.paskapata {
+    height: 33px;
+    margin: 0px 0px 0px 0px;
+    background: url('/pict/bkg_note_pata.gif?4') top no-repeat #fff;
+    border: 0px solid red
+}
+
+.btnpas {
+    margin: 0;
+    cursor: pointer;
+    cursor: hand;
+    border: 0px solid red
+}
+
+.paskaboxbtn {
+    margin: 0px auto;
+    margin-left: 5px
+}
+
+.texttop {
+    margin: 10px auto;
+    text-align: center;
+}
+
+.texttop a {
+    text-decoration: underline
+}
+
+.textpatacz {
+    margin: 20px 0px;
+    color: #5F5F5F;
+    border: 0px solid red;
+}
+
+.textpata {
+    width: 640px;
+    margin: 20px auto;
+    color: #5F5F5F;
+    border: 0px solid red;
+}
+
+.textcopy {
+    margin: 20px auto;
+    color: #5F5F5F;
+    border-top: 1px solid silver;
+    text-align: center;
+    padding: 20px;
+}
+
+.hlpbox {
+    margin: 20px 0px;
+    clear: both;
+}
+
+.txt20 {
+    font-size: 20px;
+}
+
+.txt12 {
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.prepvm {
+    margin-left: 10px;
+}
+
+.pri5 {
+    padding-right: 5px;
+    float: right;
+}
+
+.vato {
+    vertical-align: top;
+}
+
+.mabo10 {
+    margin-bottom: 10px
+}
+
+.bo1red {
+    border: 1px solid red;
+}
+
+.prepsz:hover {
+    background-color: #C0C0C0;
+    text-decoration: none;
+}
+
+.sellay {
+    background-color: #9F9F9F;
+}
+
+.boxmain {
+    text-align: center;
+    width: 990px;
+    margin: 0 auto;
+    margin-top: 50px;
+    border: 0px solid navy;
+}
+
+.boxtelocz {
+    text-align: left;
+    width: 650px;
+    border: 0px solid red;
+    float: left;
+}
+
+.boxtelo {
+    text-align: left;
+    width: 950px;
+    border: 0px solid red;
+    float: left;
+}
+
+.boxteloen {
+    text-align: left;
+    width: 650px;
+    border: 0px solid red;
+    float: left;
+}
+
+.boxtelosk {
+    text-align: left;
+    width: 650px;
+    border: 0px solid red;
+    float: left;
+}
+
+.rirek {
+    float: right;
+    border: 0px solid navy;
+    margin-top: 20px;
+}
+
+.bdel {
+    font-size: 14px;
+}
+
+/*kulaty obj*/
+
+/*
+.horlev { position:absolute; top:-10px; left:-10px; background:url('/pict/kulrohs.gif') left top no-repeat #fff; } 
+.horprav { position:absolute; top:-10px; right:-10px; background:url('/pict/kulrohs.gif') right top no-repeat #fff; } 
+.dollev { position:absolute; bottom:-10px; left:-10px; background:url('/pict/kulrohs.gif') left bottom no-repeat #fff; } 
+.dolprav { position:absolute; bottom:-10px; right:-10px; background:url('/pict/kulrohs.gif') right bottom no-repeat #fff; } 
+.horlev, .horprav, .dollev, .dolprav { width:10px; height:10px; font-size:0px; } 
+*/
+
+.boxtip {
+    /*background-color: #fcfb94;*/
+    text-align: left;
+    margin: 5px 5px;
+    border: 0px solid red;
+}
+
+.boxtip img {
+    margin: -3px 5px 0 0
+}
+
+#btnsv {
+    display: none;
+}
+
+.t10 {
+    font-size: 10px;
+    font-family: Tahoma
+}
+
+.t11 {
+    font-size: 11px;
+}
+
+.t12 {
+    font-size: 12px;
+}
+
+.t13 {
+    font-size: 13px;
+}
+
+.t14 {
+    font-size: 14px;
+}
+
+.t15 {
+    font-size: 15px;
+}
+
+.t16 {
+    font-size: 16px;
+}
+
+.t18 {
+    font-size: 18px;
+}
+
+.t22 {
+    font-size: 22px;
+}
+
+.t20 {
+    font-size: 20px;
+}
+
+.t24 {
+    font-size: 24px;
+}
+
+.t26 {
+    font-size: 26px;
+}
+
+.t28 {
+    font-size: 28px;
+}
+
+.t32 {
+    font-size: 32px;
+}
+
+.lh18 {
+    line-height: 18px;
+}
+
+.lh20 {
+    line-height: 20px;
+}
+
+.lh22 {
+    line-height: 22px;
+}
+
+.lh24 {
+    line-height: 24px;
+}
+
+.lh26 {
+    line-height: 26px;
+}
+
+.lh30 {
+    line-height: 30px;
+}
+
+.lh40 {
+    line-height: 40px;
+}
+
+.lh50 {
+    line-height: 50px;
+}
+
+.ma5 {
+    margin: 5px;
+}
+
+.ma10 {
+    margin: 10px;
+}
+
+.ma20 {
+    margin: 20px;
+}
+
+.mato5 {
+    margin-top: 5px;
+}
+
+.mato10 {
+    margin-top: 10px;
+}
+
+.mato20 {
+    margin-top: 20px;
+}
+
+.mabo5 {
+    margin-bottom: 5px;
+}
+
+.mabo10 {
+    margin-bottom: 10px;
+}
+
+.mabo20 {
+    margin-bottom: 20px;
+}
+
+.maa {
+    margin: 0px auto;
+}
+
+.male5 {
+    margin-left: 5px;
+}
+
+.male10 {
+    margin-left: 10px;
+}
+
+.male20 {
+    margin-left: 20px;
+}
+
+.male30 {
+    margin-left: 30px;
+}
+
+.male40 {
+    margin-left: 40px;
+}
+
+.male50 {
+    margin-left: 50px;
+}
+
+.mari5 {
+    margin-right: 5px;
+}
+
+.mari10 {
+    margin-right: 10px;
+}
+
+.mari20 {
+    margin-right: 20px;
+}
+
+.mari30 {
+    margin-right: 30px;
+}
+
+.mari40 {
+    margin-right: 40px;
+}
