@@ -9,7 +9,7 @@
 html {
     font-family: sans-serif;
     -webkit-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%
+    -ms-text-size-adjust: 100%;
 }
 
 body {
@@ -1963,12 +1963,12 @@ pre code {
     color: inherit;
     white-space: pre-wrap;
     background-color: transparent;
-    border-radius: 0
+    border-radius: 0;
 }
 
 .pre-scrollable {
     max-height: 340px;
-    overflow-y: scroll
+    overflow-y: scroll;
 }
 
 .container {
@@ -1976,12 +1976,10 @@ pre code {
     flex-direction: column;
     align-items: center;
     margin: 0 auto 0 auto;
-    overflow-x: hidden;
-}
 
 @media (min-width:768px) {
     .container {
-        width: 750px
+        width: 750px;
     }
 }
 
@@ -2035,7 +2033,7 @@ pre code {
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
-    column-gap: 100px;
+    column-gap: 120px;
     margin: 10px auto;
 }
 
